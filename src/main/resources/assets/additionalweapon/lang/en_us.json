@@ -1,0 +1,54 @@
+{
+  "itemGroup.additionalweapons" : "Additional Weapons",
+
+  "item.additionalweapon.diamond_greatsword": "Diamond Greatsword",
+  "item.additionalweapon.golden_greatsword": "Golden Greatsword",
+  "item.additionalweapon.iron_greatsword": "Iron Greatsword",
+  "item.additionalweapon.netherite_greatsword": "Netherite Greatsword",
+  "item.additionalweapon.stone_greatsword": "Stone Greatsword",
+  "item.additionalweapon.wooden_greatsword": "Wooden Greatsword",
+
+  "item.additionalweapon.diamond_greataxe": "Diamond Greataxe",
+  "item.additionalweapon.golden_greataxe": "Golden Greataxe",
+  "item.additionalweapon.iron_greataxe": "Iron Greataxe",
+  "item.additionalweapon.netherite_greataxe": "Netherite Greataxe",
+  "item.additionalweapon.stone_greataxe": "Stone Greataxe",
+  "item.additionalweapon.wooden_greataxe": "Wooden Greataxe",
+  
+  "item.additionalweapon.wooden_pole": "Wooden Pole",
+  
+  "item.additionalweapon.diamond_spear": "Diamond Spear",
+  "item.additionalweapon.golden_spear": "Golden Spear",
+  "item.additionalweapon.iron_spear": "Iron Spear",
+  "item.additionalweapon.netherite_spear": "Netherite Spear",
+  "item.additionalweapon.stone_spear": "Stone Spear",
+  "item.additionalweapon.wooden_spear": "Wooden Spear",
+
+  "item.additionalweapon.diamond_halberd": "Diamond Halberd",
+  "item.additionalweapon.golden_halberd": "Golden Halberd",
+  "item.additionalweapon.iron_halberd": "Iron Halberd",
+  "item.additionalweapon.netherite_halberd": "Netherite Halberd",
+  "item.additionalweapon.stone_halberd": "Stone Halberd",
+  "item.additionalweapon.wooden_halberd": "Wooden Halberd",
+
+  "item.additionalweapon.diamond_glaive": "Diamond Glaive",
+  "item.additionalweapon.golden_glaive": "Golden Glaive",
+  "item.additionalweapon.iron_glaive": "Iron Glaive",
+  "item.additionalweapon.netherite_glaive": "Netherite Glaive",
+  "item.additionalweapon.stone_glaive": "Stone Glaive",
+  "item.additionalweapon.wooden_glaive": "Wooden Glaive",
+
+  "item.additionalweapon.diamond_katana": "Diamond Katana",
+  "item.additionalweapon.golden_katana": "Golden Katana",
+  "item.additionalweapon.iron_katana": "Iron Katana",
+  "item.additionalweapon.netherite_katana": "Netherite Katana",
+  "item.additionalweapon.stone_katana": "Stone Katana",
+  "item.additionalweapon.wooden_katana": "Wooden Katana",
+
+  "item.additionalweapon.diamond_scimitar": "Diamond Scimitar",
+  "item.additionalweapon.golden_scimitar": "Golden Scimitar",
+  "item.additionalweapon.iron_scimitar": "Iron Scimitar",
+  "item.additionalweapon.netherite_scimitar": "Netherite Scimitar",
+  "item.additionalweapon.stone_scimitar": "Stone Scimitar",
+  "item.additionalweapon.wooden_scimitar": "Wooden Scimitar"
+}

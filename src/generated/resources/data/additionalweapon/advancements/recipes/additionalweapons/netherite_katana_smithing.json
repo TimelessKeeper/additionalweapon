@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "additionalweapon:netherite_katana_smithing"
+    ]
+  },
+  "criteria": {
+    "has_TagKey[minecraft:item / forge:ingots/netherite]": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/netherite"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "additionalweapon:netherite_katana_smithing"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_TagKey[minecraft:item / forge:ingots/netherite]",
+      "has_the_recipe"
+    ]
+  ]
+}

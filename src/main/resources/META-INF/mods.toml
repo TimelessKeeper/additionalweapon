@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+[[mods]]
+modId="additionalweapon"
+version="${file.jarVersion}"
+displayName="Additional Weapon"
+logoFile="additionalweapon.png"
+credits="Thanks for this example mod goes to Java"
+authors="Timeless Keeper"
+description='''
+This mod add additional weapons using the Better Combat mod. It's inspire by the Medieval Weapon mod and the Spartan Weaponry mod.
+'''
+
+[[dependencies.additionalweapon]]
+modId="forge"
+mandatory=true
+versionRange="[40,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.additionalweapon]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.18.2]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.additionalweapon]]
+modId="bettercombat"
+mandatory=true
+versionRange="[1.4.3,)"
+ordering="NONE"
+side="BOTH"
