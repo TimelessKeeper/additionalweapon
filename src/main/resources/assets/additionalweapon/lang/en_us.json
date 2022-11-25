@@ -8,6 +8,20 @@
   "item.additionalweapon.stone_greatsword": "Stone Greatsword",
   "item.additionalweapon.wooden_greatsword": "Wooden Greatsword",
 
+  "item.additionalweapon.diamond_scimitar": "Diamond Scimitar",
+  "item.additionalweapon.golden_scimitar": "Golden Scimitar",
+  "item.additionalweapon.iron_scimitar": "Iron Scimitar",
+  "item.additionalweapon.netherite_scimitar": "Netherite Scimitar",
+  "item.additionalweapon.stone_scimitar": "Stone Scimitar",
+  "item.additionalweapon.wooden_scimitar": "Wooden Scimitar",
+
+  "item.additionalweapon.diamond_katana": "Diamond Katana",
+  "item.additionalweapon.golden_katana": "Golden Katana",
+  "item.additionalweapon.iron_katana": "Iron Katana",
+  "item.additionalweapon.netherite_katana": "Netherite Katana",
+  "item.additionalweapon.stone_katana": "Stone Katana",
+  "item.additionalweapon.wooden_katana": "Wooden Katana",
+
   "item.additionalweapon.diamond_greataxe": "Diamond Greataxe",
   "item.additionalweapon.golden_greataxe": "Golden Greataxe",
   "item.additionalweapon.iron_greataxe": "Iron Greataxe",
@@ -38,17 +52,10 @@
   "item.additionalweapon.stone_glaive": "Stone Glaive",
   "item.additionalweapon.wooden_glaive": "Wooden Glaive",
 
-  "item.additionalweapon.diamond_katana": "Diamond Katana",
-  "item.additionalweapon.golden_katana": "Golden Katana",
-  "item.additionalweapon.iron_katana": "Iron Katana",
-  "item.additionalweapon.netherite_katana": "Netherite Katana",
-  "item.additionalweapon.stone_katana": "Stone Katana",
-  "item.additionalweapon.wooden_katana": "Wooden Katana",
-
-  "item.additionalweapon.diamond_scimitar": "Diamond Scimitar",
-  "item.additionalweapon.golden_scimitar": "Golden Scimitar",
-  "item.additionalweapon.iron_scimitar": "Iron Scimitar",
-  "item.additionalweapon.netherite_scimitar": "Netherite Scimitar",
-  "item.additionalweapon.stone_scimitar": "Stone Scimitar",
-  "item.additionalweapon.wooden_scimitar": "Wooden Scimitar"
+  "item.additionalweapon.pendorite_greatsword": "Pendorite Greatsword",
+  "item.additionalweapon.pendorite_scimitar": "Pendorite Scimitar",
+  "item.additionalweapon.pendorite_greataxe": "Pendorite Greataxe",
+  "item.additionalweapon.pendorite_spear": "Pendorite Spear",
+  "item.additionalweapon.pendorite_halberd": "Pendorite Halberd",
+  "item.additionalweapon.pendorite_glaive": "Pendorite Glaive"
 }
