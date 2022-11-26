@@ -50,12 +50,5 @@
   "item.additionalweapon.iron_glaive": "Iron Glaive",
   "item.additionalweapon.netherite_glaive": "Netherite Glaive",
   "item.additionalweapon.stone_glaive": "Stone Glaive",
-  "item.additionalweapon.wooden_glaive": "Wooden Glaive",
-
-  "item.additionalweapon.pendorite_greatsword": "Pendorite Greatsword",
-  "item.additionalweapon.pendorite_scimitar": "Pendorite Scimitar",
-  "item.additionalweapon.pendorite_greataxe": "Pendorite Greataxe",
-  "item.additionalweapon.pendorite_spear": "Pendorite Spear",
-  "item.additionalweapon.pendorite_halberd": "Pendorite Halberd",
-  "item.additionalweapon.pendorite_glaive": "Pendorite Glaive"
+  "item.additionalweapon.wooden_glaive": "Wooden Glaive"
 }

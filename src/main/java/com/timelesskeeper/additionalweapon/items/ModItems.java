@@ -1,7 +1,7 @@
-package com.timelesskeeper.additionalweapon.item;
+package com.timelesskeeper.additionalweapon.items;
 
 import com.timelesskeeper.additionalweapon.AdditionalWeapon;
-import com.timelesskeeper.additionalweapon.item.newweapons.*;
+import com.timelesskeeper.additionalweapon.items.newweapons.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
@@ -75,6 +75,15 @@ public class ModItems {
     public static final RegistryObject<Item> GOLDEN_GLAIVE = ITEMS.register("golden_glaive", () -> new GlaiveItem(Tiers.GOLD, iProp));
     public static final RegistryObject<Item> DIAMOND_GLAIVE = ITEMS.register("diamond_glaive", () -> new GlaiveItem(Tiers.DIAMOND, iProp));
     public static final RegistryObject<Item> NETHERITE_GLAIVE = ITEMS.register("netherite_glaive", () ->new GlaiveItem(Tiers.NETHERITE, iProp));
+
+    // Copper - Minecraft
+    public static final RegistryObject<Item> COPPER_GREATSWORD = ModItems.ITEMS.register("copper_greatsword", () -> new GreatswordItem(ModTiers.COPPER, iProp));
+    public static final RegistryObject<Item> COPPER_SCIMITAR = ModItems.ITEMS.register("copper_scimitar", () -> new ScimitarItem(ModTiers.COPPER, iProp));
+    public static final RegistryObject<Item> COPPER_KATANA = ModItems.ITEMS.register("copper_katana", () -> new KatanaItem(ModTiers.COPPER, iProp));
+    public static final RegistryObject<Item> COPPER_GREATAXE = ModItems.ITEMS.register("copper_greataxe", () -> new GreataxeItem(ModTiers.COPPER, iProp));
+    public static final RegistryObject<Item> COPPER_SPEAR = ModItems.ITEMS.register("copper_spear", () -> new SpearItem(ModTiers.COPPER, iProp));
+    public static final RegistryObject<Item> COPPER_HALBERD = ModItems.ITEMS.register("copper_halberd", () -> new HalberdItem(ModTiers.COPPER, iProp));
+    public static final RegistryObject<Item> COPPER_GLAIVE = ModItems.ITEMS.register("copper_glaive", () -> new GlaiveItem(ModTiers.COPPER, iProp));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

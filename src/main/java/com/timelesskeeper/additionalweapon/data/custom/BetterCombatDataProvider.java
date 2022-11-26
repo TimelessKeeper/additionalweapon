@@ -14,7 +14,7 @@ import java.nio.file.Path;
 import java.util.Set;
 import java.util.function.Consumer;
 
-public class BetterCombatDataProvider implements DataProvider  {
+public class BetterCombatDataProvider implements DataProvider {
     private static final Logger LOGGER = LogUtils.getLogger();
     protected final DataGenerator.PathProvider pathProvider;
 

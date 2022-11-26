@@ -1,7 +1,7 @@
 package com.timelesskeeper.additionalweapon;
 
 import com.mojang.logging.LogUtils;
-import com.timelesskeeper.additionalweapon.item.ModItems;
+import com.timelesskeeper.additionalweapon.items.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

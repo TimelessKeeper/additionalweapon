@@ -1,4 +1,4 @@
-package com.timelesskeeper.additionalweapon.item;
+package com.timelesskeeper.additionalweapon.items;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

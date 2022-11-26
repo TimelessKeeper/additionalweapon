@@ -1,4 +1,11 @@
-// 1.19.2	2022-11-24T22:05:53.3951598	Item Models: additionalweapon
+// 1.19.2	2022-11-25T20:18:53.0058791	Item Models: additionalweapon
+ca127d1e13e44f0c9517c611deaa53bf7c99c30d assets/additionalweapon/models/item/copper_glaive.json
+b3dacb51ad2ff22741159fe060e65ae4cf6633b3 assets/additionalweapon/models/item/copper_greataxe.json
+711c0040ca76c5bba3fd4cb41f81a95dfa1ed86e assets/additionalweapon/models/item/copper_greatsword.json
+041fc6d3654c836b54e2ea7587942b810fb89dee assets/additionalweapon/models/item/copper_halberd.json
+0ed6e065cc0a3436582adb45655ebabc8d67acbd assets/additionalweapon/models/item/copper_katana.json
+85871b1a234518084b3ec89bcb3985326df72fec assets/additionalweapon/models/item/copper_scimitar.json
+2df01d14f8f1e10654aa87557b90aa227b59db27 assets/additionalweapon/models/item/copper_spear.json
 940c3eae8d37d252aa4b33784e56be967f0cb0ea assets/additionalweapon/models/item/diamond_glaive.json
 a3ef9b78c93294749c628709d2de43cee029dc5c assets/additionalweapon/models/item/diamond_greataxe.json
 49f8b7c383b88e102c965acc6171b7c525f7fcbb assets/additionalweapon/models/item/diamond_greatsword.json

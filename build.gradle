@@ -6,7 +6,7 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '1.0.0-1.19.2'
+version = "${project_version}-${mc_version}"
 group = 'com.timelesskeeper.additionalweapon'
 archivesBaseName = 'additionalweapon'
 
@@ -64,9 +64,6 @@ minecraft {
 
             property 'forge.enabledGameTestNamespaces', 'additionalweapon'
 
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-
             mods {
                 additionalweapon {
                     source sourceSets.main
@@ -105,11 +102,11 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19.2-43.1.53'
+    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 
-    implementation fg.deobf('maven.modrinth:better-combat:1.4.5+1.19-forge')
-    api fg.deobf("me.shedaniel.cloth:cloth-config-forge:8.2.88")
-    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:0.4.0-test4")
+    implementation fg.deobf("maven.modrinth:better-combat:${better_combat_version}-forge")
+    api fg.deobf("me.shedaniel.cloth:cloth-config-forge:${cloth_config_version}")
+    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:${player_anim_version}")
 }
 
 jar {

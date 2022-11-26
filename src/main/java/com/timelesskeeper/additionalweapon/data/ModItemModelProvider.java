@@ -19,6 +19,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         builders("netherite");
         builders("stone");
         builders("wooden");
+
+        builders("copper"); // Minecraft
     }
 
 

@@ -1,4 +1,4 @@
-package com.timelesskeeper.additionalweapon.item.newweapons;
+package com.timelesskeeper.additionalweapon.items.newweapons;
 
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Tier;
