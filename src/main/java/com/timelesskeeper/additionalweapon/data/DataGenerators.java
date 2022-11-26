@@ -1,9 +1,6 @@
 package com.timelesskeeper.additionalweapon.data;
 
 import com.timelesskeeper.additionalweapon.AdditionalWeapon;
-import com.timelesskeeper.additionalweapon.data.client.ModItemModelProvider;
-import com.timelesskeeper.additionalweapon.data.client.ModRecipeProvider;
-import com.timelesskeeper.additionalweapon.data.client.WeaponAttributeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,6 +17,6 @@ public class DataGenerators {
 
         gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
         gen.addProvider(new ModRecipeProvider(gen));
-        gen.addProvider(new WeaponAttributeProvider(gen));
+        gen.addProvider(new ModWeaponAttributeProvider(gen));
     }
 }

@@ -103,6 +103,11 @@ public class WeaponAttributeBuilder {
             return this.id;
         }
 
+        @Override
+        public String getPath() {
+            return String.format("data/%s/weapon_attributes/%s.json", id.getNamespace(), id.getPath());
+        }
+
         public JsonObject serialize() {
             JsonObject json = new JsonObject();
 

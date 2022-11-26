@@ -5,10 +5,12 @@ import com.google.gson.JsonObject;
 import javax.annotation.Nullable;
 
 public class WeaponSoundBuilder {
+
     private String id;
     @Nullable private Float volume;
     @Nullable private Float pitch;
     @Nullable private Float randomness;
+
 
     public WeaponSoundBuilder(String id) {
         this.id = id;

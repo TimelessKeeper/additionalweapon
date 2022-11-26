@@ -1,9 +1,9 @@
 package com.timelesskeeper.additionalweapon.data;
 
-import com.timelesskeeper.additionalweapon.data.custom.BetterCombatDataProvider;
 import com.timelesskeeper.additionalweapon.data.custom.FinishedWeaponAttribute;
 import com.timelesskeeper.additionalweapon.data.custom.WeaponAttackBuilder;
 import com.timelesskeeper.additionalweapon.data.custom.WeaponAttributeBuilder;
+import com.timelesskeeper.additionalweapon.data.custom.BetterCombatDataProvider;
 import com.timelesskeeper.additionalweapon.items.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.Item;
@@ -12,8 +12,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Consumer;
 
 public class ModWeaponAttributeProvider extends BetterCombatDataProvider {
-    public ModWeaponAttributeProvider(DataGenerator pGenerator) {
-        super(pGenerator);
+    public ModWeaponAttributeProvider(DataGenerator generator) {
+        super(generator);
     }
 
     @Override
@@ -26,14 +26,6 @@ public class ModWeaponAttributeProvider extends BetterCombatDataProvider {
         greatsword(pWeaponAttributeConsumer, ModItems.NETHERITE_GREATSWORD);
         greatsword(pWeaponAttributeConsumer, ModItems.STONE_GREATSWORD);
         greatsword(pWeaponAttributeConsumer, ModItems.WOODEN_GREATSWORD);
-
-        // greataxe
-        greataxe(pWeaponAttributeConsumer, ModItems.DIAMOND_GREATAXE);
-        greataxe(pWeaponAttributeConsumer, ModItems.GOLDEN_GREATAXE);
-        greataxe(pWeaponAttributeConsumer, ModItems.IRON_GREATAXE);
-        greataxe(pWeaponAttributeConsumer, ModItems.NETHERITE_GREATAXE);
-        greataxe(pWeaponAttributeConsumer, ModItems.STONE_GREATAXE);
-        greataxe(pWeaponAttributeConsumer, ModItems.WOODEN_GREATAXE);
 
         // scimitar
         scimitar(pWeaponAttributeConsumer, ModItems.DIAMOND_SCIMITAR);
@@ -50,6 +42,14 @@ public class ModWeaponAttributeProvider extends BetterCombatDataProvider {
         katana(pWeaponAttributeConsumer, ModItems.NETHERITE_KATANA);
         katana(pWeaponAttributeConsumer, ModItems.STONE_KATANA);
         katana(pWeaponAttributeConsumer, ModItems.WOODEN_KATANA);
+
+        // greataxe
+        greataxe(pWeaponAttributeConsumer, ModItems.DIAMOND_GREATAXE);
+        greataxe(pWeaponAttributeConsumer, ModItems.GOLDEN_GREATAXE);
+        greataxe(pWeaponAttributeConsumer, ModItems.IRON_GREATAXE);
+        greataxe(pWeaponAttributeConsumer, ModItems.NETHERITE_GREATAXE);
+        greataxe(pWeaponAttributeConsumer, ModItems.STONE_GREATAXE);
+        greataxe(pWeaponAttributeConsumer, ModItems.WOODEN_GREATAXE);
 
         // spear
         spear(pWeaponAttributeConsumer, ModItems.DIAMOND_SPEAR);
@@ -74,6 +74,15 @@ public class ModWeaponAttributeProvider extends BetterCombatDataProvider {
         glaive(pWeaponAttributeConsumer, ModItems.NETHERITE_GLAIVE);
         glaive(pWeaponAttributeConsumer, ModItems.STONE_GLAIVE);
         glaive(pWeaponAttributeConsumer, ModItems.WOODEN_GLAIVE);
+
+        // Copper - Minecraft
+        greatsword(pWeaponAttributeConsumer, ModItems.COPPER_GREATSWORD);
+        scimitar(pWeaponAttributeConsumer, ModItems.COPPER_SCIMITAR);
+        katana(pWeaponAttributeConsumer, ModItems.COPPER_KATANA);
+        greataxe(pWeaponAttributeConsumer, ModItems.COPPER_GREATAXE);
+        spear(pWeaponAttributeConsumer, ModItems.COPPER_SPEAR);
+        halberd(pWeaponAttributeConsumer, ModItems.COPPER_HALBERD);
+        glaive(pWeaponAttributeConsumer, ModItems.COPPER_GLAIVE);
     }
 
     private void greatsword(Consumer<FinishedWeaponAttribute> pWeaponAttributeConsumer, RegistryObject<Item> item)
