@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "/": {
+      "item": "additionalweapon:wooden_pole"
+    }
+  },
+  "pattern": [
+    " # ",
+    " / ",
+    " # "
+  ],
+  "result": {
+    "item": "additionalweapon:stone_battlestaff"
+  }
+}

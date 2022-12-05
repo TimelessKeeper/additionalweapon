@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/iron"
+    },
+    "/": {
+      "item": "additionalweapon:wooden_pole"
+    }
+  },
+  "pattern": [
+    " # ",
+    " / ",
+    " # "
+  ],
+  "result": {
+    "item": "additionalweapon:iron_battlestaff"
+  }
+}

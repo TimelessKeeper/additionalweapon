@@ -75,7 +75,16 @@ public class ModWeaponAttributeProvider extends BetterCombatDataProvider {
         glaive(pWeaponAttributeConsumer, ModItems.STONE_GLAIVE);
         glaive(pWeaponAttributeConsumer, ModItems.WOODEN_GLAIVE);
 
+        // battlestaff
+        battlestaff(pWeaponAttributeConsumer, ModItems.DIAMOND_BATTLESTAFF);
+        battlestaff(pWeaponAttributeConsumer, ModItems.GOLDEN_BATTLESTAFF);
+        battlestaff(pWeaponAttributeConsumer, ModItems.IRON_BATTLESTAFF);
+        battlestaff(pWeaponAttributeConsumer, ModItems.NETHERITE_BATTLESTAFF);
+        battlestaff(pWeaponAttributeConsumer, ModItems.STONE_BATTLESTAFF);
+        battlestaff(pWeaponAttributeConsumer, ModItems.WOODEN_BATTLESTAFF);
+
         // Copper - Minecraft
+        sword(pWeaponAttributeConsumer, ModItems.COPPER_SWORD);
         greatsword(pWeaponAttributeConsumer, ModItems.COPPER_GREATSWORD);
         scimitar(pWeaponAttributeConsumer, ModItems.COPPER_SCIMITAR);
         katana(pWeaponAttributeConsumer, ModItems.COPPER_KATANA);
@@ -83,6 +92,12 @@ public class ModWeaponAttributeProvider extends BetterCombatDataProvider {
         spear(pWeaponAttributeConsumer, ModItems.COPPER_SPEAR);
         halberd(pWeaponAttributeConsumer, ModItems.COPPER_HALBERD);
         glaive(pWeaponAttributeConsumer, ModItems.COPPER_GLAIVE);
+        battlestaff(pWeaponAttributeConsumer, ModItems.COPPER_BATTLESTAFF);
+    }
+
+    private void sword(Consumer<FinishedWeaponAttribute> pWeaponAttributeConsumer, RegistryObject<Item> item)
+    {
+        new WeaponAttributeBuilder().parent("bettercombat:sword").save(pWeaponAttributeConsumer, item.getId());
     }
 
     private void greatsword(Consumer<FinishedWeaponAttribute> pWeaponAttributeConsumer, RegistryObject<Item> item)
@@ -121,5 +136,10 @@ public class ModWeaponAttributeProvider extends BetterCombatDataProvider {
     private void glaive(Consumer<FinishedWeaponAttribute> pWeaponAttributeConsumer, RegistryObject<Item> item)
     {
         new WeaponAttributeBuilder().parent("bettercombat:glaive").save(pWeaponAttributeConsumer, item.getId());
+    }
+
+    private void battlestaff(Consumer<FinishedWeaponAttribute> pWeaponAttributeConsumer, RegistryObject<Item> item)
+    {
+        new WeaponAttributeBuilder().parent("bettercombat:battlestaff").save(pWeaponAttributeConsumer, item.getId());
     }
 }

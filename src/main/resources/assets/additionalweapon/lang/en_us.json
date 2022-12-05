@@ -50,5 +50,30 @@
   "item.additionalweapon.iron_glaive": "Iron Glaive",
   "item.additionalweapon.netherite_glaive": "Netherite Glaive",
   "item.additionalweapon.stone_glaive": "Stone Glaive",
-  "item.additionalweapon.wooden_glaive": "Wooden Glaive"
+  "item.additionalweapon.wooden_glaive": "Wooden Glaive",
+
+  "item.additionalweapon.diamond_battlestaff": "Diamond Battlestaff",
+  "item.additionalweapon.golden_battlestaff": "Golden Battlestaff",
+  "item.additionalweapon.iron_battlestaff": "Iron Battlestaff",
+  "item.additionalweapon.netherite_battlestaff": "Netherite Battlestaff",
+  "item.additionalweapon.stone_battlestaff": "Stone Battlestaff",
+  "item.additionalweapon.wooden_battlestaff": "Wooden Battlestaff",
+
+  "item.additionalweapon.copper_helmet": "Copper Helmet",
+  "item.additionalweapon.copper_chestplate": "Copper Chestplate",
+  "item.additionalweapon.copper_leggings": "Copper Leggings",
+  "item.additionalweapon.copper_boots": "Copper Boots",
+  "item.additionalweapon.copper_sword": "Copper Sword",
+  "item.additionalweapon.copper_shovel": "Copper Shovel",
+  "item.additionalweapon.copper_pickaxe": "Copper Pickaxe",
+  "item.additionalweapon.copper_axe": "Copper Axe",
+  "item.additionalweapon.copper_hoe": "Copper Hoe",
+  "item.additionalweapon.copper_greatsword": "Copper Greatsword",
+  "item.additionalweapon.copper_scimitar": "Copper Scimitar",
+  "item.additionalweapon.copper_katana": "Copper Katana",
+  "item.additionalweapon.copper_greataxe": "Copper Greataxe",
+  "item.additionalweapon.copper_spear": "Copper Spear",
+  "item.additionalweapon.copper_halberd": "Copper Halberd",
+  "item.additionalweapon.copper_glaive": "Copper Glaive",
+  "item.additionalweapon.copper_battlestaff": "Copper Battlestaff"
 }

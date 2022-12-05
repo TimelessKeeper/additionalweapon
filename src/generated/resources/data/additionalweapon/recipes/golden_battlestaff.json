@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/gold"
+    },
+    "/": {
+      "item": "additionalweapon:wooden_pole"
+    }
+  },
+  "pattern": [
+    " # ",
+    " / ",
+    " # "
+  ],
+  "result": {
+    "item": "additionalweapon:golden_battlestaff"
+  }
+}
