@@ -77,6 +77,12 @@ public class ModRecipeProvider extends RecipeProvider {
         registerGlaive(pFinishedRecipeConsumer, ModItems.STONE_GLAIVE.get(), ItemTags.STONE_TOOL_MATERIALS);
         registerGlaive(pFinishedRecipeConsumer, ModItems.WOODEN_GLAIVE.get(), ItemTags.PLANKS);
 
+        registerBattlestaff(pFinishedRecipeConsumer, ModItems.DIAMOND_BATTLESTAFF.get(), Tags.Items.GEMS_DIAMOND);
+        registerBattlestaff(pFinishedRecipeConsumer, ModItems.GOLDEN_BATTLESTAFF.get(), Tags.Items.INGOTS_GOLD);
+        registerBattlestaff(pFinishedRecipeConsumer, ModItems.IRON_BATTLESTAFF.get(), Tags.Items.INGOTS_IRON);
+        registerBattlestaff(pFinishedRecipeConsumer, ModItems.STONE_BATTLESTAFF.get(), ItemTags.STONE_TOOL_MATERIALS);
+        registerBattlestaff(pFinishedRecipeConsumer, ModItems.WOODEN_BATTLESTAFF.get(), ItemTags.PLANKS);
+
         registerNetherite(pFinishedRecipeConsumer, ModItems.DIAMOND_GREATSWORD.get(), ModItems.NETHERITE_GREATSWORD.get());
         registerNetherite(pFinishedRecipeConsumer, ModItems.DIAMOND_GREATAXE.get(), ModItems.NETHERITE_GREATAXE.get());
         registerNetherite(pFinishedRecipeConsumer, ModItems.DIAMOND_SCIMITAR.get(), ModItems.NETHERITE_SCIMITAR.get());
@@ -84,8 +90,18 @@ public class ModRecipeProvider extends RecipeProvider {
         registerNetherite(pFinishedRecipeConsumer, ModItems.DIAMOND_SPEAR.get(), ModItems.NETHERITE_SPEAR.get());
         registerNetherite(pFinishedRecipeConsumer, ModItems.DIAMOND_HALBERD.get(), ModItems.NETHERITE_HALBERD.get());
         registerNetherite(pFinishedRecipeConsumer, ModItems.DIAMOND_GLAIVE.get(), ModItems.NETHERITE_GLAIVE.get());
+        registerNetherite(pFinishedRecipeConsumer, ModItems.DIAMOND_BATTLESTAFF.get(), ModItems.NETHERITE_BATTLESTAFF.get());
 
         // Copper - Minecraft
+        registerHelmet(pFinishedRecipeConsumer, ModItems.COPPER_HELMET.get(), Tags.Items.INGOTS_COPPER);
+        registerChestplate(pFinishedRecipeConsumer, ModItems.COPPER_CHESTPLATE.get(), Tags.Items.INGOTS_COPPER);
+        registerLeggings(pFinishedRecipeConsumer, ModItems.COPPER_LEGGINGS.get(), Tags.Items.INGOTS_COPPER);
+        registerBoots(pFinishedRecipeConsumer, ModItems.COPPER_BOOTS.get(), Tags.Items.INGOTS_COPPER);
+        registerSword(pFinishedRecipeConsumer, ModItems.COPPER_SWORD.get(), Tags.Items.INGOTS_COPPER);
+        registerShovel(pFinishedRecipeConsumer, ModItems.COPPER_SHOVEL.get(), Tags.Items.INGOTS_COPPER);
+        registerPickaxe(pFinishedRecipeConsumer, ModItems.COPPER_PICKAXE.get(), Tags.Items.INGOTS_COPPER);
+        registerAxe(pFinishedRecipeConsumer, ModItems.COPPER_AXE.get(), Tags.Items.INGOTS_COPPER);
+        registerHoe(pFinishedRecipeConsumer, ModItems.COPPER_HOE.get(), Tags.Items.INGOTS_COPPER);
         registerGreatsword(pFinishedRecipeConsumer, ModItems.COPPER_GREATSWORD.get(), Tags.Items.INGOTS_COPPER);
         registerGreataxe(pFinishedRecipeConsumer, ModItems.COPPER_GREATAXE.get(), Tags.Items.INGOTS_COPPER);
         registerScimitar(pFinishedRecipeConsumer, ModItems.COPPER_SCIMITAR.get(), Tags.Items.INGOTS_COPPER);
@@ -93,6 +109,43 @@ public class ModRecipeProvider extends RecipeProvider {
         registerSpear(pFinishedRecipeConsumer, ModItems.COPPER_SPEAR.get(), Tags.Items.INGOTS_COPPER);
         registerHalberd(pFinishedRecipeConsumer, ModItems.COPPER_HALBERD.get(), Tags.Items.INGOTS_COPPER);
         registerGlaive(pFinishedRecipeConsumer, ModItems.COPPER_GLAIVE.get(), Tags.Items.INGOTS_COPPER);
+        registerBattlestaff(pFinishedRecipeConsumer, ModItems.COPPER_BATTLESTAFF.get(), Tags.Items.INGOTS_COPPER);
+    }
+
+    private void registerHelmet(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerArmor(pFinishedRecipeConsumer, weaponItem, bladeItem, "###","# #");
+    }
+
+    private void registerChestplate(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerArmor(pFinishedRecipeConsumer, weaponItem, bladeItem, "# #","###","###");
+    }
+
+    private void registerLeggings(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerArmor(pFinishedRecipeConsumer, weaponItem, bladeItem, "###","# #","# #");
+    }
+
+    private void registerBoots(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerArmor(pFinishedRecipeConsumer, weaponItem, bladeItem, "# #","# #");
+    }
+
+    private void registerSword(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerWeapon(pFinishedRecipeConsumer, weaponItem, bladeItem, Items.STICK, " # "," # "," / ");
+    }
+
+    private void registerShovel(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerWeapon(pFinishedRecipeConsumer, weaponItem, bladeItem, Items.STICK, " # "," / "," / ");
+    }
+
+    private void registerPickaxe(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerWeapon(pFinishedRecipeConsumer, weaponItem, bladeItem, Items.STICK, "###"," / "," / ");
+    }
+
+    private void registerAxe(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerWeapon(pFinishedRecipeConsumer, weaponItem, bladeItem, Items.STICK, "## ","#/ "," / ");
+    }
+
+    private void registerHoe(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerWeapon(pFinishedRecipeConsumer, weaponItem, bladeItem, Items.STICK, "## "," / "," / ");
     }
 
     private void registerGreatsword(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
@@ -121,6 +174,32 @@ public class ModRecipeProvider extends RecipeProvider {
 
     private void registerGlaive(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
         registerWeapon(pFinishedRecipeConsumer, weaponItem, bladeItem, ModItems.WOODEN_POLE.get(), " # "," # ","#/#");
+    }
+
+    private void registerBattlestaff(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem) {
+        registerWeapon(pFinishedRecipeConsumer, weaponItem, bladeItem, ModItems.WOODEN_POLE.get(),
+                " # "," / "," # ");
+    }
+
+    private void registerArmor(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem,
+                               String pattern1, String pattern2) {
+        ShapedRecipeBuilder.shaped(weaponItem)
+                .define('#', bladeItem)
+                .pattern(pattern1)
+                .pattern(pattern2)
+                .unlockedBy("has_item", has(bladeItem))
+                .save(pFinishedRecipeConsumer);
+    }
+
+    private void registerArmor(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem,
+                               String pattern1, String pattern2, String pattern3) {
+        ShapedRecipeBuilder.shaped(weaponItem)
+                .define('#', bladeItem)
+                .pattern(pattern1)
+                .pattern(pattern2)
+                .pattern(pattern3)
+                .unlockedBy("has_item", has(bladeItem))
+                .save(pFinishedRecipeConsumer);
     }
 
     private void registerWeapon(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item weaponItem, TagKey<Item> bladeItem,
