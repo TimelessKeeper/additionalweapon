@@ -1,0 +1,6 @@
+{
+  "parent": "additionalweapon:item/iron_battlestaff",
+  "textures": {
+    "layer0": "additionalweapon:item/zinc_battlestaff"
+  }
+}

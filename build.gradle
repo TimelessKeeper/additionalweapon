@@ -14,6 +14,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
+    //mappings channel: 'official', version: '1.19.2'
     mappings channel: 'parchment', version: '2022.08.14-1.19.2'
 
     runs {
@@ -24,13 +25,13 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'additionalweapon'
+            property 'forge.enabledGameTestNamespaces', 'examplemod'
 
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
-                additionalweapon {
+                examplemod {
                     source sourceSets.main
                 }
             }
@@ -102,7 +103,7 @@ repositories {
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+    minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'
 
     implementation fg.deobf("maven.modrinth:better-combat:${better_combat_version}-forge")
     api fg.deobf("me.shedaniel.cloth:cloth-config-forge:${cloth_config_version}")
@@ -114,7 +115,7 @@ jar {
         attributes([
                 "Specification-Title"     : "additionalweapon",
                 "Specification-Vendor"    : "timelesskeeper",
-                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "timelesskeeper",

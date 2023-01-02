@@ -5,7 +5,7 @@
       "tag": "forge:gems/diamond"
     },
     "/": {
-      "item": "additionalweapon:wooden_pole"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [

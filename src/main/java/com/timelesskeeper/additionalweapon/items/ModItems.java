@@ -1,172 +1,245 @@
 package com.timelesskeeper.additionalweapon.items;
 
+import com.google.common.collect.ImmutableMap;
 import com.timelesskeeper.additionalweapon.AdditionalWeapon;
-import com.timelesskeeper.additionalweapon.items.newweapons.*;
+import com.timelesskeeper.additionalweapon.api.items.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.util.Tuple;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, AdditionalWeapon.MOD_ID);
 
-    public static final RegistryObject<Item> WOODEN_POLE = ITEMS.register("wooden_pole", () -> new SwordItem(
-            Tiers.WOOD, 1, -2.4f, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    //<editor-fold desc="Materials Data">
+    public static MaterialData[] moddedMaterials = new MaterialData[] {
+            new MaterialData("wooden", "Wooden", Tiers.WOOD, ItemTags.PLANKS),
+            new MaterialData("stone", "Stone", Tiers.STONE, ItemTags.STONE_TOOL_MATERIALS),
+            new MaterialData("iron", "Iron", Tiers.IRON, Tags.Items.INGOTS_IRON),
+            new MaterialData("golden", "Golden", Tiers.GOLD, Tags.Items.INGOTS_GOLD),
+            new MaterialData("diamond", "Diamond", Tiers.DIAMOND, Tags.Items.GEMS_DIAMOND),
+            new MaterialData("netherite", "Netherite", Tiers.NETHERITE, Tags.Items.INGOTS_NETHERITE),
+            new MaterialData("tin", "Tin", ModToolTiers.TIN, ModTags.INGOTS_TIN),
+            new MaterialData("zinc", "Zinc", ModToolTiers.ZINC, ModTags.INGOTS_ZINC),
+            new MaterialData("copper", "Copper", ModToolTiers.COPPER, Tags.Items.INGOTS_COPPER),
+            new MaterialData("bronze", "Bronze", ModToolTiers.BRONZE, ModTags.INGOTS_BRONZE),
+            new MaterialData("brass", "Brass", ModToolTiers.BRASS, ModTags.INGOTS_BRASS),
+            new MaterialData("rosegold", "Rose Gold", ModToolTiers.ROSEGOLD, ModTags.INGOTS_ROSEGOLD),
+            new MaterialData("steel", "Steel", ModToolTiers.STEEL, ModTags.INGOTS_STEEL)
+    };
 
-    // Greatsword
-    public static final RegistryObject<Item> WOODEN_GREATSWORD = ITEMS.register("wooden_greatsword", () ->
-            new GreatswordItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_GREATSWORD = ITEMS.register("stone_greatsword", () ->
-            new GreatswordItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_GREATSWORD = ITEMS.register("iron_greatsword", () ->
-            new GreatswordItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_GREATSWORD = ITEMS.register("golden_greatsword", () ->
-            new GreatswordItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_GREATSWORD = ITEMS.register("diamond_greatsword", () ->
-            new GreatswordItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_GREATSWORD = ITEMS.register("netherite_greatsword", () ->
-            new GreatswordItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    public static Map<String, Tuple<Tier, ArmorMaterial>> vanillaMaterials = ImmutableMap.of(
+            "tin", new Tuple<>(ModToolTiers.TIN, ModArmorTiers.TIN),
+            "zinc", new Tuple<>(ModToolTiers.ZINC, ModArmorTiers.ZINC),
+            "copper", new Tuple<>(ModToolTiers.COPPER, ModArmorTiers.COPPER),
+            "bronze", new Tuple<>(ModToolTiers.BRONZE, ModArmorTiers.BRONZE),
+            "brass", new Tuple<>(ModToolTiers.BRASS, ModArmorTiers.BRASS),
+            "rosegold", new Tuple<>(ModToolTiers.ROSEGOLD, ModArmorTiers.ROSEGOLD),
+            "steel", new Tuple<>(ModToolTiers.STEEL, ModArmorTiers.STEEL)
+    );
+    //</editor-fold>
 
-    // Scimitar
-    public static final RegistryObject<Item> WOODEN_SCIMITAR = ITEMS.register("wooden_scimitar", () ->
-            new ScimitarItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_SCIMITAR = ITEMS.register("stone_scimitar", () ->
-            new ScimitarItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_SCIMITAR = ITEMS.register("iron_scimitar", () ->
-            new ScimitarItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_SCIMITAR = ITEMS.register("golden_scimitar", () ->
-            new ScimitarItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_SCIMITAR = ITEMS.register("diamond_scimitar", () ->
-            new ScimitarItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_SCIMITAR = ITEMS.register("netherite_scimitar", () ->
-            new ScimitarItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    //<editor-fold desc="Crafting Item">
+    public static final RegistryObject<Item> WOODEN_POLE = ModItems.ITEMS.register("wooden_pole", () ->
+            new Item((new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    //</editor-fold>
 
-    // Katana
-    public static final RegistryObject<Item> WOODEN_KATANA = ITEMS.register("wooden_katana", () ->
-            new KatanaItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_KATANA = ITEMS.register("stone_katana", () ->
-            new KatanaItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_KATANA = ITEMS.register("iron_katana", () ->
-            new KatanaItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_KATANA = ITEMS.register("golden_katana", () ->
-            new KatanaItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_KATANA = ITEMS.register("diamond_katana", () ->
-            new KatanaItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_KATANA = ITEMS.register("netherite_katana", () ->
-            new KatanaItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    //<editor-fold desc="Modded Weapon">
+    public static Map<String, RegistryObject<Item>> GREATSWORDS = registerGreatsword();
+    public static Map<String, RegistryObject<Item>> SCIMITARS = registerScimitar();
+    public static Map<String, RegistryObject<Item>> KATANAS = registerKatana();
+    public static Map<String, RegistryObject<Item>> GREATAXES = registerGreataxe();
+    public static Map<String, RegistryObject<Item>> SPEARS = registerSpear();
+    public static Map<String, RegistryObject<Item>> HALBERDS = registerHalberd();
+    public static Map<String, RegistryObject<Item>> GLAIVES = registerGlaive();
+    public static Map<String, RegistryObject<Item>> BATTLESTAFFS = registerBattlestaff();
 
-    // Greataxe
-    public static final RegistryObject<Item> WOODEN_GREATAXE = ITEMS.register("wooden_greataxe", () ->
-            new GreataxeItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_GREATAXE = ITEMS.register("stone_greataxe", () ->
-            new GreataxeItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_GREATAXE = ITEMS.register("iron_greataxe", () ->
-            new GreataxeItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_GREATAXE = ITEMS.register("golden_greataxe", () ->
-            new GreataxeItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_GREATAXE = ITEMS.register("diamond_greataxe", () ->
-            new GreataxeItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_GREATAXE = ITEMS.register("netherite_greataxe", () ->
-            new GreataxeItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    private static Map<String, RegistryObject<Item>> registerGreatsword() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_greatsword", () ->
+                    new GreatswordItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
 
-    // Spear
-    public static final RegistryObject<Item> WOODEN_SPEAR = ITEMS.register("wooden_spear", () ->
-            new SpearItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_SPEAR = ITEMS.register("stone_spear", () ->
-            new SpearItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_SPEAR = ITEMS.register("iron_spear", () ->
-            new SpearItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_SPEAR = ITEMS.register("golden_spear", () ->
-            new SpearItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_SPEAR = ITEMS.register("diamond_spear", () ->
-            new SpearItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_SPEAR = ITEMS.register("netherite_spear", () ->
-            new SpearItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    private static Map<String, RegistryObject<Item>> registerScimitar() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_scimitar", () ->
+                    new ScimitarItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
 
-    // Halberd
-    public static final RegistryObject<Item> WOODEN_HALBERD = ITEMS.register("wooden_halberd", () ->
-            new HalberdItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_HALBERD = ITEMS.register("stone_halberd", () ->
-            new HalberdItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_HALBERD = ITEMS.register("iron_halberd", () ->
-            new HalberdItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_HALBERD = ITEMS.register("golden_halberd", () ->
-            new HalberdItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_HALBERD = ITEMS.register("diamond_halberd", () ->
-            new HalberdItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_HALBERD = ITEMS.register("netherite_halberd", () ->
-            new HalberdItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    private static Map<String, RegistryObject<Item>> registerKatana() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_katana", () ->
+                    new KatanaItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
 
-    // Glaive
-    public static final RegistryObject<Item> WOODEN_GLAIVE = ITEMS.register("wooden_glaive", () ->
-            new GlaiveItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_GLAIVE = ITEMS.register("stone_glaive", () ->
-            new GlaiveItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_GLAIVE = ITEMS.register("iron_glaive", () ->
-            new GlaiveItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_GLAIVE = ITEMS.register("golden_glaive", () ->
-            new GlaiveItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_GLAIVE = ITEMS.register("diamond_glaive", () ->
-            new GlaiveItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_GLAIVE = ITEMS.register("netherite_glaive", () ->
-            new GlaiveItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    private static Map<String, RegistryObject<Item>> registerGreataxe() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_greataxe", () ->
+                    new GreataxeItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
 
-    // Glaive
-    public static final RegistryObject<Item> WOODEN_BATTLESTAFF = ITEMS.register("wooden_battlestaff", () ->
-            new BattlestaffItem(Tiers.WOOD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> STONE_BATTLESTAFF = ITEMS.register("stone_battlestaff", () ->
-            new BattlestaffItem(Tiers.STONE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> IRON_BATTLESTAFF = ITEMS.register("iron_battlestaff", () ->
-            new BattlestaffItem(Tiers.IRON, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> GOLDEN_BATTLESTAFF = ITEMS.register("golden_battlestaff", () ->
-            new BattlestaffItem(Tiers.GOLD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> DIAMOND_BATTLESTAFF = ITEMS.register("diamond_battlestaff", () ->
-            new BattlestaffItem(Tiers.DIAMOND, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> NETHERITE_BATTLESTAFF = ITEMS.register("netherite_battlestaff", () ->
-            new BattlestaffItem(Tiers.NETHERITE, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    private static Map<String, RegistryObject<Item>> registerSpear() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_spear", () ->
+                    new SpearItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
 
-    // Copper - Minecraft
-    public static final RegistryObject<Item> COPPER_HELMET = ModItems.ITEMS.register("copper_helmet", () ->
-            new ArmorItem(ModArmorTiers.COPPER, EquipmentSlot.HEAD, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_CHESTPLATE = ModItems.ITEMS.register("copper_chestplate", () ->
-            new ArmorItem(ModArmorTiers.COPPER, EquipmentSlot.CHEST, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_LEGGINGS = ModItems.ITEMS.register("copper_leggings", () ->
-            new ArmorItem(ModArmorTiers.COPPER, EquipmentSlot.LEGS, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_BOOTS = ModItems.ITEMS.register("copper_boots", () ->
-            new ArmorItem(ModArmorTiers.COPPER, EquipmentSlot.FEET, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_SWORD = ModItems.ITEMS.register("copper_sword", () ->
-            new SwordItem(ModToolTiers.COPPER, 3, -2.4F,
-                    (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_SHOVEL = ModItems.ITEMS.register("copper_shovel", () ->
-            new ShovelItem(ModToolTiers.COPPER, 1.5F, -3.0F,
-                    (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_PICKAXE = ModItems.ITEMS.register("copper_pickaxe", () ->
-            new PickaxeItem(ModToolTiers.COPPER, 1, -2.8F,
-                    (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_AXE = ModItems.ITEMS.register("copper_axe", () ->
-            new AxeItem(ModToolTiers.COPPER, 6.5F, -3.15F,
-                    (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_HOE = ModItems.ITEMS.register("copper_hoe", () ->
-            new NewHoeItem(ModToolTiers.COPPER, -1.5F, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_GREATSWORD = ModItems.ITEMS.register("copper_greatsword", () ->
-            new GreatswordItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_SCIMITAR = ModItems.ITEMS.register("copper_scimitar", () ->
-            new ScimitarItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_KATANA = ModItems.ITEMS.register("copper_katana", () ->
-            new KatanaItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_GREATAXE = ModItems.ITEMS.register("copper_greataxe", () ->
-            new GreataxeItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_SPEAR = ModItems.ITEMS.register("copper_spear", () ->
-            new SpearItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_HALBERD = ModItems.ITEMS.register("copper_halberd", () ->
-            new HalberdItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_GLAIVE = ModItems.ITEMS.register("copper_glaive", () ->
-            new GlaiveItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
-    public static final RegistryObject<Item> COPPER_BATTLESTAFF = ModItems.ITEMS.register("copper_battlestaff", () ->
-            new BattlestaffItem(ModToolTiers.COPPER, (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON)));
+    private static Map<String, RegistryObject<Item>> registerHalberd() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_halberd", () ->
+                    new HalberdItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerGlaive() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_glaive", () ->
+                    new GlaiveItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerBattlestaff() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        for (MaterialData data : moddedMaterials) {
+            map.put(data.getName(), ITEMS.register(data.getName() + "_battlestaff", () ->
+                    new BattlestaffItem(data.getTier(), (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON))));
+        }
+        return map;
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Armor">
+    public static Map<String, RegistryObject<Item>> HELMETS = registerHelmet();
+    public static Map<String, RegistryObject<Item>> CHESTPLATES = registerChestplate();
+    public static Map<String, RegistryObject<Item>> LEGGINGS = registerLeggings();
+    public static Map<String, RegistryObject<Item>> BOOTS = registerBoots();
+
+    private static Map<String, RegistryObject<Item>> registerHelmet() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_helmet", () ->
+                    new ArmorItem(tier.getB(), EquipmentSlot.HEAD,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerChestplate() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_chestplate", () ->
+                    new ArmorItem(tier.getB(), EquipmentSlot.CHEST,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerLeggings() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_leggings", () ->
+                    new ArmorItem(tier.getB(), EquipmentSlot.LEGS,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerBoots() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_boots", () ->
+                    new ArmorItem(tier.getB(), EquipmentSlot.FEET,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+    //</editor-fold>
+
+    //<editor-fold desc="Vanilla Tool">
+    public static Map<String, RegistryObject<Item>> SWORDS = registerSword();
+    public static Map<String, RegistryObject<Item>> SHOVELS = registerShovel();
+    public static Map<String, RegistryObject<Item>> PICKAXES = registerPickaxe();
+    public static Map<String, RegistryObject<Item>> AXES = registerAxe();
+    public static Map<String, RegistryObject<Item>> HOES = registerHoe();
+
+    private static Map<String, RegistryObject<Item>> registerSword() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_sword", () ->
+                    new SwordItem(tier.getA(), 3, -2.4F,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerShovel() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_shovel", () ->
+                    new ShovelItem(tier.getA(), 1.5F, -3.0F,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerPickaxe() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_pickaxe", () ->
+                    new PickaxeItem(tier.getA(),1, -2.8F,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerAxe() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_axe", () ->
+                    new AxeItem(tier.getA(), 6.5F, -3.15F,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+
+    private static Map<String, RegistryObject<Item>> registerHoe() {
+        Map<String, RegistryObject<Item>> map = new HashMap<>();
+        vanillaMaterials.forEach((name, tier) -> {
+            map.put(name, ITEMS.register(name + "_hoe", () ->
+                    new NewHoeItem(tier.getA(),-1.5F,
+                            (new Item.Properties()).tab(CreativeTab.ADDITIONAL_WEAPON_VANILLA))));
+        });
+        return map;
+    }
+    //</editor-fold>
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

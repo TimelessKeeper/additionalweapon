@@ -6,14 +6,33 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Supplier;
 
 public enum ModArmorTiers implements ArmorMaterial {
-    COPPER(AdditionalWeapon.MOD_ID + ":copper", 11, new int[]{1, 4, 5, 2}, 17,
-            SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(Items.COPPER_INGOT));
+    TIN(AdditionalWeapon.MOD_ID + ":tin", 8, new int[]{2, 3, 5, 2},
+            22, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+            () -> Ingredient.of(ModTags.INGOTS_TIN)),
+    ZINC(AdditionalWeapon.MOD_ID + ":zinc", 9, new int[]{2, 3, 5, 2},
+            20, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+            () -> Ingredient.of(ModTags.INGOTS_ZINC)),
+    COPPER(AdditionalWeapon.MOD_ID + ":copper", 11, new int[]{2, 4, 6, 2},
+            18, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+            () -> Ingredient.of(Tags.Items.INGOTS_COPPER)),
+    BRASS(AdditionalWeapon.MOD_ID + ":brass", 11, new int[]{2, 4, 6, 2},
+            18, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+            () -> Ingredient.of(ModTags.INGOTS_BRASS)),
+    BRONZE(AdditionalWeapon.MOD_ID + ":bronze", 13, new int[]{2, 5, 6, 2},
+            16, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
+            () -> Ingredient.of(ModTags.INGOTS_BRONZE)),
+    ROSEGOLD(AdditionalWeapon.MOD_ID + ":rosegold", 11, new int[]{2, 4, 5, 2},
+            22, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F,
+            () -> Ingredient.of(ModTags.INGOTS_ROSEGOLD)),
+    STEEL(AdditionalWeapon.MOD_ID + ":steel", 20, new int[]{2, 5, 7, 3},
+            10, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.0F,
+            () -> Ingredient.of(ModTags.INGOTS_STEEL));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;

@@ -10,7 +10,15 @@ public class CreativeTab {
     {
         public @NotNull ItemStack makeIcon()
         {
-            return new ItemStack(ModItems.GOLDEN_GREATSWORD.get());
+            return new ItemStack(ModItems.GREATSWORDS.get("golden").get());
+        }
+    };
+
+    public static final CreativeModeTab ADDITIONAL_WEAPON_VANILLA = new CreativeModeTab("additionalweapons_vanilla")
+    {
+        public @NotNull ItemStack makeIcon()
+        {
+            return new ItemStack(ModItems.CHESTPLATES.get("copper").get());
         }
     };
 }

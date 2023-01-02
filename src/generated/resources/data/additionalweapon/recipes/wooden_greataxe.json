@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
-    "###",
-    "#/#",
-    " / "
+    " # ",
+    " # ",
+    "#/#"
   ],
   "result": {
     "item": "additionalweapon:wooden_greataxe"

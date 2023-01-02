@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
-    "  #",
     " # ",
-    " / "
+    " # ",
+    "#/#"
   ],
   "result": {
     "item": "additionalweapon:diamond_scimitar"

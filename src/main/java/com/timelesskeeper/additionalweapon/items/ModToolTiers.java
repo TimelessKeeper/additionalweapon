@@ -1,14 +1,27 @@
 package com.timelesskeeper.additionalweapon.items;
 
 import net.minecraft.util.LazyLoadedValue;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Supplier;
 
 public enum ModToolTiers implements Tier {
-    COPPER(2, 190, 7.0F, 1.5F, 18, () -> Ingredient.of(Items.COPPER_INGOT));
+    TIN(1, 50, 11.5F, 0.0F, 20,
+            () -> Ingredient.of(ModTags.INGOTS_TIN)),
+    ZINC(1, 100, 10F, 0.5F, 19,
+            () -> Ingredient.of(ModTags.INGOTS_ZINC)),
+    COPPER(2, 150, 7.0F, 1.5F, 18,
+            () -> Ingredient.of(Tags.Items.INGOTS_COPPER)),
+    BRASS(2, 150, 8.5F, 1.5F, 18,
+            () -> Ingredient.of(ModTags.INGOTS_BRASS)),
+    BRONZE(2, 200, 6.5F, 2F, 17,
+            () -> Ingredient.of(ModTags.INGOTS_BRONZE)),
+    ROSEGOLD(2, 150, 11F, 1.5F, 20,
+            () -> Ingredient.of(ModTags.INGOTS_ROSEGOLD)),
+    STEEL(3, 600, 7.0F, 2.5F, 14,
+                  () -> Ingredient.of(ModTags.INGOTS_STEEL));
 
     private final int level;
     private final int uses;

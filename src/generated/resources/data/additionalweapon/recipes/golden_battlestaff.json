@@ -5,13 +5,13 @@
       "tag": "forge:ingots/gold"
     },
     "/": {
-      "item": "additionalweapon:wooden_pole"
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
     " # ",
-    " / ",
-    " # "
+    " # ",
+    "#/#"
   ],
   "result": {
     "item": "additionalweapon:golden_battlestaff"
