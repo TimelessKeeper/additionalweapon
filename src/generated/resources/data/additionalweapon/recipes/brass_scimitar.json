@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
+    "  #",
     " # ",
-    " # ",
-    "#/#"
+    " / "
   ],
   "result": {
     "item": "additionalweapon:brass_scimitar"

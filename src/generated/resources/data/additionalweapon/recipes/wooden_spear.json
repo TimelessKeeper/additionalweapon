@@ -5,13 +5,13 @@
       "tag": "minecraft:planks"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [
     " # ",
     " # ",
-    "#/#"
+    " / "
   ],
   "result": {
     "item": "additionalweapon:wooden_spear"

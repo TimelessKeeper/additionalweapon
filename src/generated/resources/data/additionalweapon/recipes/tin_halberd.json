@@ -5,13 +5,13 @@
       "tag": "forge:ingots/tin"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [
     " # ",
-    " # ",
-    "#/#"
+    "## ",
+    "#/ "
   ],
   "result": {
     "item": "additionalweapon:tin_halberd"

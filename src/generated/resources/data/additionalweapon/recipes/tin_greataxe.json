@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
-    " # ",
-    " # ",
-    "#/#"
+    "###",
+    "#/#",
+    " / "
   ],
   "result": {
     "item": "additionalweapon:tin_greataxe"

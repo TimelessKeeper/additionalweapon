@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
-    " # ",
-    " # ",
-    "#/#"
+    "###",
+    "#/#",
+    " / "
   ],
   "result": {
     "item": "additionalweapon:rosegold_greataxe"

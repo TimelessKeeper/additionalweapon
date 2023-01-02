@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
-    " # ",
-    " # ",
-    "#/#"
+    "###",
+    "#/#",
+    " / "
   ],
   "result": {
     "item": "additionalweapon:bronze_greataxe"

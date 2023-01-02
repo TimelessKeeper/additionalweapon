@@ -5,13 +5,13 @@
       "tag": "forge:ingots/brass"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [
     " # ",
-    " # ",
-    "#/#"
+    "## ",
+    "#/ "
   ],
   "result": {
     "item": "additionalweapon:brass_halberd"

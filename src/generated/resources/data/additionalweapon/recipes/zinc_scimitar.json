@@ -9,9 +9,9 @@
     }
   },
   "pattern": [
+    "  #",
     " # ",
-    " # ",
-    "#/#"
+    " / "
   ],
   "result": {
     "item": "additionalweapon:zinc_scimitar"

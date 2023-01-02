@@ -5,7 +5,7 @@
       "tag": "forge:ingots/rosegold"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [

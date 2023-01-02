@@ -5,7 +5,7 @@
       "tag": "minecraft:stone_tool_materials"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [

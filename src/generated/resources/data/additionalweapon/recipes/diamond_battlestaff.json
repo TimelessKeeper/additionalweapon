@@ -5,13 +5,13 @@
       "tag": "forge:gems/diamond"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [
     " # ",
-    " # ",
-    "#/#"
+    " / ",
+    " # "
   ],
   "result": {
     "item": "additionalweapon:diamond_battlestaff"

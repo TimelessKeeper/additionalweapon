@@ -5,13 +5,13 @@
       "tag": "forge:ingots/iron"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [
     " # ",
-    " # ",
-    "#/#"
+    " / ",
+    " # "
   ],
   "result": {
     "item": "additionalweapon:iron_battlestaff"

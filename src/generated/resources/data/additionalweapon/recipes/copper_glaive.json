@@ -5,7 +5,7 @@
       "tag": "forge:ingots/copper"
     },
     "/": {
-      "item": "minecraft:stick"
+      "item": "additionalweapon:wooden_pole"
     }
   },
   "pattern": [

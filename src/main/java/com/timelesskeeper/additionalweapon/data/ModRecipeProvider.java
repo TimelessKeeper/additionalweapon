@@ -55,19 +55,19 @@ public class ModRecipeProvider extends BaseRecipeProvider implements IConditionB
             } else {
                 registerGreatsword(pFinishedRecipeConsumer, ModItems.GREATSWORDS.get(data.getName()).get(),
                         data.getBladeItem());
-                registerGreatsword(pFinishedRecipeConsumer, ModItems.SCIMITARS.get(data.getName()).get(),
+                registerScimitar(pFinishedRecipeConsumer, ModItems.SCIMITARS.get(data.getName()).get(),
                         data.getBladeItem());
-                registerGreatsword(pFinishedRecipeConsumer, ModItems.KATANAS.get(data.getName()).get(),
+                registerKatana(pFinishedRecipeConsumer, ModItems.KATANAS.get(data.getName()).get(),
                         data.getBladeItem());
-                registerGreatsword(pFinishedRecipeConsumer, ModItems.GREATAXES.get(data.getName()).get(),
+                registerGreataxe(pFinishedRecipeConsumer, ModItems.GREATAXES.get(data.getName()).get(),
                         data.getBladeItem());
-                registerGreatsword(pFinishedRecipeConsumer, ModItems.SPEARS.get(data.getName()).get(),
+                registerSpear(pFinishedRecipeConsumer, ModItems.SPEARS.get(data.getName()).get(),
                         data.getBladeItem());
-                registerGreatsword(pFinishedRecipeConsumer, ModItems.HALBERDS.get(data.getName()).get(),
+                registerHalberd(pFinishedRecipeConsumer, ModItems.HALBERDS.get(data.getName()).get(),
                         data.getBladeItem());
-                registerGreatsword(pFinishedRecipeConsumer, ModItems.GLAIVES.get(data.getName()).get(),
+                registerGlaive(pFinishedRecipeConsumer, ModItems.GLAIVES.get(data.getName()).get(),
                         data.getBladeItem());
-                registerGreatsword(pFinishedRecipeConsumer, ModItems.BATTLESTAFFS.get(data.getName()).get(),
+                registerBattlestaff(pFinishedRecipeConsumer, ModItems.BATTLESTAFFS.get(data.getName()).get(),
                         data.getBladeItem());
 
                 if (ModItems.vanillaMaterials.containsKey(data.getName()))
