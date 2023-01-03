@@ -7,12 +7,11 @@ import com.timelesskeeper.additionalweapon.items.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class ModRecipeProvider extends BaseRecipeProvider implements IConditionBuilder {
+public class ModRecipeProvider extends BaseRecipeProvider {
     public ModRecipeProvider(DataGenerator pGenerator) {
         super(pGenerator);
     }

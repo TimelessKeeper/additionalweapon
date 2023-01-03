@@ -1,9 +1,6 @@
 package com.timelesskeeper.additionalweapon.api.items;
 
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
 
 public class MaterialArmorData {
