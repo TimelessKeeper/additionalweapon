@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/steel"
-    },
-    "/": {
-      "item": "additionalweapon:wooden_pole"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:steel_battlestaff"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/steel"
+          },
+          "/": {
+            "item": "additionalweapon:wooden_pole"
+          }
+        },
+        "pattern": [
+          " # ",
+          " / ",
+          " # "
+        ],
+        "result": {
+          "item": "additionalweapon:steel_battlestaff"
+        }
+      }
     }
-  },
-  "pattern": [
-    " # ",
-    " / ",
-    " # "
-  ],
-  "result": {
-    "item": "additionalweapon:steel_battlestaff"
-  }
+  ]
 }

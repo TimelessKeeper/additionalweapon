@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/zinc"
-    },
-    "/": {
-      "item": "additionalweapon:wooden_pole"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:zinc_glaive"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/zinc"
+          },
+          "/": {
+            "item": "additionalweapon:wooden_pole"
+          }
+        },
+        "pattern": [
+          " # ",
+          " # ",
+          "#/#"
+        ],
+        "result": {
+          "item": "additionalweapon:zinc_glaive"
+        }
+      }
     }
-  },
-  "pattern": [
-    " # ",
-    " # ",
-    "#/#"
-  ],
-  "result": {
-    "item": "additionalweapon:zinc_glaive"
-  }
+  ]
 }

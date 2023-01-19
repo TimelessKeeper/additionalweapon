@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/zinc"
-    },
-    "/": {
-      "item": "minecraft:stick"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:zinc_scimitar"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/zinc"
+          },
+          "/": {
+            "item": "minecraft:stick"
+          }
+        },
+        "pattern": [
+          "  #",
+          " # ",
+          " / "
+        ],
+        "result": {
+          "item": "additionalweapon:zinc_scimitar"
+        }
+      }
     }
-  },
-  "pattern": [
-    "  #",
-    " # ",
-    " / "
-  ],
-  "result": {
-    "item": "additionalweapon:zinc_scimitar"
-  }
+  ]
 }

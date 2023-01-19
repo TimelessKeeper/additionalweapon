@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/rosegold"
-    },
-    "/": {
-      "item": "minecraft:stick"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:rosegold_shovel"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/rosegold"
+          },
+          "/": {
+            "item": "minecraft:stick"
+          }
+        },
+        "pattern": [
+          " # ",
+          " / ",
+          " / "
+        ],
+        "result": {
+          "item": "additionalweapon:rosegold_shovel"
+        }
+      }
     }
-  },
-  "pattern": [
-    " # ",
-    " / ",
-    " / "
-  ],
-  "result": {
-    "item": "additionalweapon:rosegold_shovel"
-  }
+  ]
 }

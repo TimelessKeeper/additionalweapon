@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "minecraft:stone_tool_materials"
-    },
-    "/": {
-      "item": "minecraft:stick"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:stone_greataxe"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "minecraft:stone_tool_materials"
+          },
+          "/": {
+            "item": "minecraft:stick"
+          }
+        },
+        "pattern": [
+          "###",
+          "#/#",
+          " / "
+        ],
+        "result": {
+          "item": "additionalweapon:stone_greataxe"
+        }
+      }
     }
-  },
-  "pattern": [
-    "###",
-    "#/#",
-    " / "
-  ],
-  "result": {
-    "item": "additionalweapon:stone_greataxe"
-  }
+  ]
 }

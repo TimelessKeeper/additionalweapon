@@ -1,12 +1,25 @@
 {
-  "type": "minecraft:smithing",
-  "addition": {
-    "tag": "forge:ingots/netherite"
-  },
-  "base": {
-    "item": "additionalweapon:diamond_katana"
-  },
-  "result": {
-    "item": "additionalweapon:netherite_katana"
-  }
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:netherite_katana"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "forge:ingots/netherite"
+        },
+        "base": {
+          "item": "additionalweapon:diamond_katana"
+        },
+        "result": {
+          "item": "additionalweapon:netherite_katana"
+        }
+      }
+    }
+  ]
 }

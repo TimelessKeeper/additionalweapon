@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:gems/diamond"
-    },
-    "/": {
-      "item": "additionalweapon:wooden_pole"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:diamond_spear"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:gems/diamond"
+          },
+          "/": {
+            "item": "additionalweapon:wooden_pole"
+          }
+        },
+        "pattern": [
+          " # ",
+          " # ",
+          " / "
+        ],
+        "result": {
+          "item": "additionalweapon:diamond_spear"
+        }
+      }
     }
-  },
-  "pattern": [
-    " # ",
-    " # ",
-    " / "
-  ],
-  "result": {
-    "item": "additionalweapon:diamond_spear"
-  }
+  ]
 }

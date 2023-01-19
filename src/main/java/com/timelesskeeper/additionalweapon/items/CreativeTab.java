@@ -10,7 +10,7 @@ public class CreativeTab {
     {
         public @NotNull ItemStack makeIcon()
         {
-            return new ItemStack(ModItems.GREATSWORDS.get("golden").get());
+            return new ItemStack(ModItems.GOLD.GREATSWORDS.get());
         }
     };
 
@@ -18,7 +18,7 @@ public class CreativeTab {
     {
         public @NotNull ItemStack makeIcon()
         {
-            return new ItemStack(ModItems.CHESTPLATES.get("copper").get());
+            return new ItemStack(ModItems.COPPER.CHESTPLATES.get());
         }
     };
 }

@@ -1,12 +1,25 @@
 {
-  "type": "minecraft:smithing",
-  "addition": {
-    "tag": "forge:ingots/netherite"
-  },
-  "base": {
-    "item": "additionalweapon:diamond_greataxe"
-  },
-  "result": {
-    "item": "additionalweapon:netherite_greataxe"
-  }
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:netherite_greataxe"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "forge:ingots/netherite"
+        },
+        "base": {
+          "item": "additionalweapon:diamond_greataxe"
+        },
+        "result": {
+          "item": "additionalweapon:netherite_greataxe"
+        }
+      }
+    }
+  ]
 }

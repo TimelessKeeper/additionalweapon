@@ -1,12 +1,25 @@
 {
-  "type": "minecraft:smithing",
-  "addition": {
-    "tag": "forge:ingots/netherite"
-  },
-  "base": {
-    "item": "additionalweapon:diamond_battlestaff"
-  },
-  "result": {
-    "item": "additionalweapon:netherite_battlestaff"
-  }
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:netherite_battlestaff"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "forge:ingots/netherite"
+        },
+        "base": {
+          "item": "additionalweapon:diamond_battlestaff"
+        },
+        "result": {
+          "item": "additionalweapon:netherite_battlestaff"
+        }
+      }
+    }
+  ]
 }

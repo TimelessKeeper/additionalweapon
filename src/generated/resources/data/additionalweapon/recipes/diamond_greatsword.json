@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:gems/diamond"
-    },
-    "/": {
-      "item": "minecraft:stick"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:diamond_greatsword"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:gems/diamond"
+          },
+          "/": {
+            "item": "minecraft:stick"
+          }
+        },
+        "pattern": [
+          " # ",
+          " # ",
+          "#/#"
+        ],
+        "result": {
+          "item": "additionalweapon:diamond_greatsword"
+        }
+      }
     }
-  },
-  "pattern": [
-    " # ",
-    " # ",
-    "#/#"
-  ],
-  "result": {
-    "item": "additionalweapon:diamond_greatsword"
-  }
+  ]
 }

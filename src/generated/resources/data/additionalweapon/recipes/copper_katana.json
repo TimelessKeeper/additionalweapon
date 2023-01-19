@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/copper"
-    },
-    "/": {
-      "item": "minecraft:stick"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:copper_katana"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/copper"
+          },
+          "/": {
+            "item": "minecraft:stick"
+          }
+        },
+        "pattern": [
+          "  #",
+          " # ",
+          "#/#"
+        ],
+        "result": {
+          "item": "additionalweapon:copper_katana"
+        }
+      }
     }
-  },
-  "pattern": [
-    "  #",
-    " # ",
-    "#/#"
-  ],
-  "result": {
-    "item": "additionalweapon:copper_katana"
-  }
+  ]
 }

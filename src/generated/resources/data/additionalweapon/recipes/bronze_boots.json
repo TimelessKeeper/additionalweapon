@@ -1,15 +1,28 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/bronze"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:bronze_boots"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/bronze"
+          }
+        },
+        "pattern": [
+          "# #",
+          "# #"
+        ],
+        "result": {
+          "item": "additionalweapon:bronze_boots"
+        }
+      }
     }
-  },
-  "pattern": [
-    "# #",
-    "# #"
-  ],
-  "result": {
-    "item": "additionalweapon:bronze_boots"
-  }
+  ]
 }

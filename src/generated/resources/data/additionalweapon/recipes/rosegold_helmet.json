@@ -1,15 +1,28 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/rosegold"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:rosegold_helmet"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/rosegold"
+          }
+        },
+        "pattern": [
+          "###",
+          "# #"
+        ],
+        "result": {
+          "item": "additionalweapon:rosegold_helmet"
+        }
+      }
     }
-  },
-  "pattern": [
-    "###",
-    "# #"
-  ],
-  "result": {
-    "item": "additionalweapon:rosegold_helmet"
-  }
+  ]
 }

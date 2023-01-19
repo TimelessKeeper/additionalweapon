@@ -1,16 +1,29 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/zinc"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:zinc_leggings"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/zinc"
+          }
+        },
+        "pattern": [
+          "###",
+          "# #",
+          "# #"
+        ],
+        "result": {
+          "item": "additionalweapon:zinc_leggings"
+        }
+      }
     }
-  },
-  "pattern": [
-    "###",
-    "# #",
-    "# #"
-  ],
-  "result": {
-    "item": "additionalweapon:zinc_leggings"
-  }
+  ]
 }

@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/copper"
-    },
-    "/": {
-      "item": "additionalweapon:wooden_pole"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:copper_battlestaff"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/copper"
+          },
+          "/": {
+            "item": "additionalweapon:wooden_pole"
+          }
+        },
+        "pattern": [
+          " # ",
+          " / ",
+          " # "
+        ],
+        "result": {
+          "item": "additionalweapon:copper_battlestaff"
+        }
+      }
     }
-  },
-  "pattern": [
-    " # ",
-    " / ",
-    " # "
-  ],
-  "result": {
-    "item": "additionalweapon:copper_battlestaff"
-  }
+  ]
 }

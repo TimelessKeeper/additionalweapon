@@ -1,12 +1,25 @@
 {
-  "type": "minecraft:smithing",
-  "addition": {
-    "tag": "forge:ingots/netherite"
-  },
-  "base": {
-    "item": "additionalweapon:diamond_scimitar"
-  },
-  "result": {
-    "item": "additionalweapon:netherite_scimitar"
-  }
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:netherite_scimitar"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:smithing",
+        "addition": {
+          "tag": "forge:ingots/netherite"
+        },
+        "base": {
+          "item": "additionalweapon:diamond_scimitar"
+        },
+        "result": {
+          "item": "additionalweapon:netherite_scimitar"
+        }
+      }
+    }
+  ]
 }

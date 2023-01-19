@@ -1,19 +1,32 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "tag": "forge:ingots/tin"
-    },
-    "/": {
-      "item": "additionalweapon:wooden_pole"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "additionalweapon:config_enable",
+          "config_enable": "additionalweapon:tin_spear"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "forge:ingots/tin"
+          },
+          "/": {
+            "item": "additionalweapon:wooden_pole"
+          }
+        },
+        "pattern": [
+          " # ",
+          " # ",
+          " / "
+        ],
+        "result": {
+          "item": "additionalweapon:tin_spear"
+        }
+      }
     }
-  },
-  "pattern": [
-    " # ",
-    " # ",
-    " / "
-  ],
-  "result": {
-    "item": "additionalweapon:tin_spear"
-  }
+  ]
 }
